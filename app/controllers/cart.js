@@ -7,9 +7,9 @@ export default class CartController extends Controller {
     }, 0);
   }
   get tax() {
-    return (0.07 * this.subtotal).toFixed(2);
+    return 0.07 * this.subtotal;
   }
   get total() {
-    return (parseFloat(this.subtotal) + parseFloat(this.tax)).toFixed(2);
+    return this.subtotal + this.tax;
   }
 }
