@@ -2,11 +2,11 @@ import Helper from '@ember/component/helper';
 import { extend } from 'qunit';
 
 export default class currency extends Helper {
-  compute(positional, named){
+  compute(positional, named) {
     const [number] = positional;
     const { sign = '$' } = named;
     const dollars = Math.floor(number);
-    let cents = Math.floor(number * 100 % 100);
+    let cents = Math.floor((number * 100) % 100);
 
     if (cents.toString().length === 1) {
       cents = '0' + cents;

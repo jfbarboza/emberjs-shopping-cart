@@ -22,4 +22,15 @@
     &:hover{
         text-decoration: none;
     }
+
+    .cart-count{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        color: white;
+        background: red;
+        border-radius: 50%;
+        width: 20px;
+    }
 }
